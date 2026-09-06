@@ -33,45 +33,45 @@
 ### Backend
 bash
 
-cd backend
-npm install
-node server.js
-Сервер: http://localhost:5000
+* cd backend
+* npm install
+* node server.js
+## Сервер: http://localhost:5000
 
-Frontend
+### Frontend
 bash
 
-cd frontend
-npm install
-npm install axios
-npm start
-Приложение: http://localhost:3000
+* cd frontend
+* npm install
+* npm install axios
+* npm start
+### Приложение: http://localhost:3000
 
-PostgreSQL
-Создать базу task_manager и выполнить database/init.sql
+### PostgreSQL
+* Создать базу task_manager и выполнить database/init.sql
 
-Python
-bash
+* Python
+* bash
 
-cd python
-pip install psycopg2 pandas
-python export_tasks.py
-Создаст tasks.csv со всеми задачами
+* cd python
+* pip install psycopg2 pandas
+* python export_tasks.py
+## Создаст tasks.csv со всеми задачами
 
-Проверка
-Запустить PostgreSQL
-в TASKS написать в строке и нажать play:
+### Проверка
+*Запустить PostgreSQL
+* В TASKS написать в строке и нажать play:
 
-SELECT * FROM public.tasks
-ORDER BY id ASC
+* SELECT * FROM public.tasks
+* ORDER BY id ASC
  
-Запустить backend
-Запустить frontend
-Открыть http://localhost:3000
-Создать, изменить, удалить задачу
-Запустить export_tasks.py и проверить tasks.csv
+1. Запустить backend
+2. Запустить frontend
+3. Открыть http://localhost:3000
+4. Создать, изменить, удалить задачу
+5. Запустить export_tasks.py и проверить tasks.csv
 
-Что добавлено:
+### Что добавлено:
 - npm install axios для frontend для возможности просматривания базы с любого ус-ва
 - Уточнены команды установки зависимостей
 - Изменен дизайн сайта, добавлены зеленый и красный цвет для простоты ориентирования
