@@ -60,7 +60,7 @@ bash
 
 ### Проверка
 ## Запустить PostgreSQL
-## В TASKS написать в строке и нажать play:
+# В TASKS написать в строке и нажать play:
 
 * SELECT * FROM public.tasks
 * ORDER BY id ASC
