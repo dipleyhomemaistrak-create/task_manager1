@@ -1,40 +1,38 @@
-Вот обновленный README с учетом всех зависимостей:
-
-markdown
 # AI Task Manager
 
 Веб-приложение для управления задачами.
 
 ## Возможности
 
-* Добавление новых задач
-* Просмотр списка задач
-* Изменение статуса (`new`, `in_progress`, `done`)
-* Удаление задач
-* Экспорт задач в CSV через Python
+1. Добавление новых задач
+2. Просмотр списка задач
+3. Изменение статуса (new, in_progress, done)
+4. Удаление задач
+5. Экспорт задач в CSV через Python
 
 ## Структура проекта
 
 ### backend
-* `server.js` — запуск Express сервера
-* `db.js` — подключение к PostgreSQL
-* `routes.js` — REST API (CRUD операции с задачами)
+* server.js — запуск Express сервера
+* db.js — подключение к PostgreSQL
+* routes.js — REST API (CRUD операции с задачами)
 
 ### frontend
-* `src/App.js` — основной компонент приложения
-* `src/App.css` — стили
-* `src/index.js` — точка входа React
+* src/App.js — основной компонент приложения
+* src/App.css — стили
+* src/index.js — точка входа React
 
 ### database
-* `init.sql` — SQL-скрипт создания таблицы `tasks`
+* init.sql — SQL-скрипт создания таблицы tasks
 
 ### python
-* `export_tasks.py` — экспорт задач из PostgreSQL в `tasks.csv`
+* export_tasks.py — экспорт задач из PostgreSQL в tasks.csv
 
 ## Запуск проекта
 
 ### Backend
-```bash
+bash
+
 cd backend
 npm install
 node server.js
@@ -42,6 +40,7 @@ node server.js
 
 Frontend
 bash
+
 cd frontend
 npm install
 npm install axios
@@ -53,6 +52,7 @@ PostgreSQL
 
 Python
 bash
+
 cd python
 pip install psycopg2 pandas
 python export_tasks.py
@@ -60,19 +60,18 @@ python export_tasks.py
 
 Проверка
 Запустить PostgreSQL
+в TASKS написать в строке и нажать play:
 
+SELECT * FROM public.tasks
+ORDER BY id ASC
+ 
 Запустить backend
-
 Запустить frontend
-
 Открыть http://localhost:3000
-
 Создать, изменить, удалить задачу
-
 Запустить export_tasks.py и проверить tasks.csv
 
-text
-
-**Что добавлено:**
-- `npm install axios` для frontend
+Что добавлено:
+- npm install axios для frontend для возможности просматривания базы с любого ус-ва
 - Уточнены команды установки зависимостей
+- Изменен дизайн сайта, добавлены зеленый и красный цвет для простоты ориентирования
