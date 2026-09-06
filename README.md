@@ -59,8 +59,8 @@ bash
 ## Создаст tasks.csv со всеми задачами
 
 ### Проверка
-*Запустить PostgreSQL
-* В TASKS написать в строке и нажать play:
+## Запустить PostgreSQL
+## В TASKS написать в строке и нажать play:
 
 * SELECT * FROM public.tasks
 * ORDER BY id ASC
