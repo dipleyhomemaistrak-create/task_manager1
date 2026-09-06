@@ -1,41 +1,40 @@
-AI Task Manager
+Вот обновленный README с учетом всех зависимостей:
+
+markdown
+# AI Task Manager
+
 Веб-приложение для управления задачами.
 
-Возможности
-Добавление новых задач
+## Возможности
 
-Просмотр списка задач
+* Добавление новых задач
+* Просмотр списка задач
+* Изменение статуса (`new`, `in_progress`, `done`)
+* Удаление задач
+* Экспорт задач в CSV через Python
 
-Изменение статуса (new, in_progress, done)
+## Структура проекта
 
-Удаление задач
+### backend
+* `server.js` — запуск Express сервера
+* `db.js` — подключение к PostgreSQL
+* `routes.js` — REST API (CRUD операции с задачами)
 
-Экспорт задач в CSV через Python
+### frontend
+* `src/App.js` — основной компонент приложения
+* `src/App.css` — стили
+* `src/index.js` — точка входа React
 
-Структура проекта
-backend
-server.js — запуск Express сервера
+### database
+* `init.sql` — SQL-скрипт создания таблицы `tasks`
 
-db.js — подключение к PostgreSQL
+### python
+* `export_tasks.py` — экспорт задач из PostgreSQL в `tasks.csv`
 
-routes.js — REST API (CRUD операции с задачами)
+## Запуск проекта
 
-frontend
-src/App.js — основной компонент приложения
-
-src/App.css — стили
-
-src/index.js — точка входа React
-
-database
-init.sql — SQL-скрипт создания таблицы tasks
-
-python
-export_tasks.py — экспорт задач из PostgreSQL в tasks.csv
-
-Запуск проекта
-Backend
-bash
+### Backend
+```bash
 cd backend
 npm install
 node server.js
@@ -45,6 +44,7 @@ Frontend
 bash
 cd frontend
 npm install
+npm install axios
 npm start
 Приложение: http://localhost:3000
 
@@ -70,3 +70,9 @@ python export_tasks.py
 Создать, изменить, удалить задачу
 
 Запустить export_tasks.py и проверить tasks.csv
+
+text
+
+**Что добавлено:**
+- `npm install axios` для frontend
+- Уточнены команды установки зависимостей
