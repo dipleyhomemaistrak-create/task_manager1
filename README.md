@@ -58,9 +58,9 @@ bash
 * python export_tasks.py
 ## Создаст tasks.csv со всеми задачами
 
-### Проверка
-## Запустить PostgreSQL
-# В TASKS написать в строке и нажать play:
+## Проверка
+1. Запустить PostgreSQL
+2. В TASKS написать в строке и нажать play:
 
 * SELECT * FROM public.tasks
 * ORDER BY id ASC
