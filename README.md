@@ -1,80 +1,72 @@
-# AI Task Manager
+AI Task Manager
+Веб-приложение для управления задачами.
 
-Простое веб-приложение для управления задачами.
+Возможности
+Добавление новых задач
 
-## Что умеет приложение
+Просмотр списка задач
 
-* Добавлять новые задачи.
-* Просматривать список задач.
-* Изменять статус задачи (`new`, `in_progress`, `done`).
-* Удалять задачи.
-* Выгружать все задачи в CSV с помощью Python.
+Изменение статуса (new, in_progress, done)
 
-## Структура проекта
+Удаление задач
 
-### backend
+Экспорт задач в CSV через Python
 
-* `server.js` — запуск сервера Express.
-* `db.js` — подключение к PostgreSQL.
-* `routes.js` — REST API (создание, получение, изменение и удаление задач).
+Структура проекта
+backend
+server.js — запуск Express сервера
 
-### frontend
+db.js — подключение к PostgreSQL
 
-* `src/App.js` — интерфейс приложения.
-* `src/App.css` — оформление страницы.
-* `src/index.js` — запуск React-приложения.
+routes.js — REST API (CRUD операции с задачами)
 
-### database
+frontend
+src/App.js — основной компонент приложения
 
-* `init.sql` — SQL-скрипт для создания таблицы `tasks`.
+src/App.css — стили
 
-### python
+src/index.js — точка входа React
 
-* `export_tasks.py` — экспорт всех задач из PostgreSQL в файл `tasks.csv`.
+database
+init.sql — SQL-скрипт создания таблицы tasks
 
-## Как запустить проект
+python
+export_tasks.py — экспорт задач из PostgreSQL в tasks.csv
 
-### 1. Backend
-
-```bash
+Запуск проекта
+Backend
+bash
 cd backend
 npm install
 node server.js
-```
+Сервер: http://localhost:5000
 
-Сервер запускается по адресу: `http://localhost:5000`
-
-### 2. Frontend
-
-```bash
+Frontend
+bash
 cd frontend
 npm install
 npm start
-```
+Приложение: http://localhost:3000
 
-Приложение открывается по адресу: `http://localhost:3000`
+PostgreSQL
+Создать базу task_manager и выполнить database/init.sql
 
-### 3. PostgreSQL
-
-Создать базу данных `task_manager` и выполнить файл `database/init.sql`.
-
-### 4. Python
-
-```bash
+Python
+bash
 cd python
 pip install psycopg2 pandas
 python export_tasks.py
-```
+Создаст tasks.csv со всеми задачами
 
-После запуска создаётся файл `tasks.csv` со всеми задачами.
+Проверка
+Запустить PostgreSQL
 
-## Как проверить работоспособность
+Запустить backend
 
-1. Запустить PostgreSQL.
-2. Запустить backend (`node server.js`).
-3. Запустить frontend (`npm start`).
-4. Открыть `http://localhost:3000`.
-5. Создать новую задачу.
-6. Изменить её статус.
-7. Удалить задачу.
-8. Запустить `export_tasks.py` и убедиться, что появился файл `tasks.csv`.
+Запустить frontend
+
+Открыть http://localhost:3000
+
+Создать, изменить, удалить задачу
+
+Запустить export_tasks.py и проверить tasks.csv
